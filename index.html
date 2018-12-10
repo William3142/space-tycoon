@@ -1,0 +1,99 @@
+<html>
+
+<head>
+<title>Space...</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+<iframe src="C:\Users\William\Downloads\Men at Work - I Come From a Land Down Under.mp3" allow="autoplay loop" style="display:none"></iframe>
+
+<div id="header">
+<div style="position: fixed; left:12%">
+    <img src="img/wood.png" style="position: relative; width: 24px; height: 16px; top: 4px;">
+    <span class="resources" id="wood">500</span>
+</div>
+<div style="position: fixed; left:24%">
+    <img src="img/stone.png" style="position: relative; width: 24px; height: 16px; top: 4px;">
+	<span class="resources" id="stone">500</span>
+</div>
+<div style="position: fixed; left:36%">
+    <img src="img/metal.png" style="position: relative; width: 24px; height: 16px; top: 4px;">
+	<span class="resources" id="metal">500</span>
+</div>
+<div style="position: fixed; left:48%">
+    <img src="img/food.png" style="position: relative; width: 24px; height: 16px; top: 4px;">
+	<span class="resources" id="food">500</span>
+</div>
+<div style="position: fixed; left:60%">
+    <img src="img/energy.png" style="position: relative; width: 24px; height: 16px; top: 4px;">
+	<span class="resources" id="energy">500</span>
+</div>
+</div>
+
+<div id="main">
+<img class="island" id="island1" src="img/island1.svg" style="position:absolute; top:100px; left:50px">
+<img class="island" id="island2" src="img/island1.svg" style="position:absolute; top:200px; left:500px">
+</div>
+
+<div id="islandmain">
+  <div id="island1main" style="display:none;">
+    <img src="img/island1.svg" style="position:absolute; top:41px; left:16px; width:992px; height: 952px;">
+    <div class="tiles" id="tiles1">
+	  <!-- Row 1 -->
+      <img src="img/tile.svg" class="tile" id="island1tile1" style="position: absolute; top:125px; left:100px;" onclick="buildingChoose(1, 1)">
+	  <img src="img/tile.svg" class="tile" id="island1tile2" style="position: absolute; top:125px; left:251px;" onclick="buildingChoose(1, 2)">
+	  <img src="img/tile.svg" class="tile" id="island1tile3" style="position: absolute; top:125px; left:402px;" onclick="buildingChoose(1, 3)">
+	  
+	  <!-- Row 2 -->
+	  <img src="img/tile.svg" class="tile" id="island1tile4" style="position: absolute; top:164px; left:175px;" onclick="buildingChoose(1, 4)">
+	  <img src="img/tile.svg" class="tile" id="island1tile5" style="position: absolute; top:164px; left:326px;" onclick="buildingChoose(1, 5)">
+	  
+	  <!-- Row 3 -->
+	  <img src="img/tile.svg" class="tile" id="island1tile6" style="position: absolute; top:203px; left:100px;" onclick="buildingChoose(1, 6)">
+	  <img src="img/tile.svg" class="tile" id="island1tile7" style="position: absolute; top:203px; left:250px;" onclick="buildingChoose(1, 7)">
+	  <img src="img/tile.svg" class="tile" id="island1tile8" style="position: absolute; top:203px; left:402px;" onclick="buildingChoose(1, 8)">
+    </div>
+	<div class="buildings" id="buildings1">
+	</div>
+  </div>
+</div>
+
+<div id="info">
+<span id="islandname"></span><br>
+<span id="islandpop"></span><br>
+<span id="islandwoodprod"></span><br>
+<span id="islandstoneprod"></span><br>
+<span id="islandmetalprod"></span><br>
+<span id="islandfoodprod"></span><br>
+<span id="islandenergyprod"></span>
+<div id="buildingchoosebuttons">
+<ul>
+<li><button class="buildingchoose" id="woodcutterbutton" onclick="checkBuilding('woodcutter')">
+<div class="buttonlefttext">Buy Woodcutter</div>
+<div class="buttonrighttext">Wood: 50<br>Stone: 100</div>
+</button></li>
+<li><button class="buildingchoose" id="quarrybutton" onclick="checkBuilding('quarry')">
+<div class="buttonlefttext">Buy Quarry</div>
+<div class="buttonrighttext">Wood: 100<br>Stone: 50</div>
+</button></li>
+<li><button class="buildingchoose" id="farmhousebutton" onclick="checkBuilding('farmhouse')">
+<div class="buttonlefttext">Buy Farmhouse</div>
+<div class="buttonrighttext">Wood: 75<br>Stone: 75</div>
+</button></li>
+<li><button class="buildingchoose" id="minebutton" onclick="checkBuilding('mine')">
+<div class="buttonlefttext">Buy Mine</div>
+<div class="buttonrighttext">Wood: 75<br>Stone: 75</div>
+</button></li>
+<li><button class="buildingchoose" id="extractorbutton" onclick="checkBuilding('extractor')">
+<div class="buttonlefttext">Buy Energy Extractor</div>
+<div class="buttonrighttext">Stone: 75<br>Metal: 75</div>
+</button></li>
+</ul>
+</div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>
